@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Academy</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#050b08;color:#00ff88;font-family:Arial,sans-serif}
+header{padding:25px;text-align:center;border-bottom:1px solid #00ff88}
+h1{ text-shadow:0 0 15px #00ff88}
+nav{display:flex;justify-content:center;gap:20px;padding:20px;flex-wrap:wrap}
+a{color:#00ff88;text-decoration:none}
+main{max-width:850px;margin:auto;padding:20px}
+.card{background:#0c1912;border:1px solid #00ff88;padding:20px;margin:15px 0;border-radius:12px}
+button{background:#00ff88;color:#001b0c;padding:12px 20px;border:0;border-radius:7px;font-weight:bold}
+input{padding:12px;width:100%;margin:8px 0;background:#07110b;color:white;border:1px solid #00ff88}
+footer{text-align:center;padding:30px;color:#6c9}
+</style>
+</head>
+<body>
+<header>
+<h1>CYBER ACADEMY</h1>
+<p>Ethical Hacking | Cyber Security</p>
+</header>
+<nav>
+<a href="#home">Bosh sahifa</a>
+<a href="#courses">Darslar</a>
+<a href="#login">Kirish</a>
+</nav>
+<main>
+<section id="home" class="card">
+<h2>Xush kelibsiz!</h2>
+<p>Kiberxavfsizlikni noldan o‘rganing.</p>
+<button onclick="alert('Cyber Academy ga xush kelibsiz!')">Boshlash</button>
+</section>
+<section id="courses">
+<h2>O‘quv kurslari</h2>
+<div class="card"><h3>1. HTML va CSS</h3><p>Sayt yaratish asoslari.</p></div>
+<div class="card"><h3>2. Python</h3><p>Dasturlash asoslari.</p></div>
+<div class="card"><h3>3. Ethical Hacking</h3><p>Qonuniy xavfsizlik sinovlari.</p></div>
+<div class="card"><h3>4. Network Security</h3><p>Tarmoq xavfsizligi.</p></div>
+</section>
+<section id="login" class="card">
+<h2>Ro‘yxatdan o‘tish</h2>
+<input id="user" placeholder="Login">
+<input id="pass" type="password" placeholder="Parol">
+<button onclick="login()">Kirish</button>
+<p id="result"></p>
+</section>
+</main>
+<footer>© 2026 Cyber Academy</footer>
+<script>
+function login(){
+let u=document.getElementById('user').value;
+let p=document.getElementById('pass').value;
+document.getElementById('result').innerText=
+u && p ? 'Xush kelibsiz, '+u+'!' : 'Login va parolni kiriting!';
+}
+</script>
+</body>
+</html>
